@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :destroy]
+  has_many_attached :photos
 
   def index
     @lists = List.all
@@ -37,4 +38,5 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:name, :photo)
   end
+
 end

@@ -66,3 +66,4 @@
 </div>
 
 <%= render "bookmarks/modal", list: @list, bookmark: @bookmark %>
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
